@@ -6,7 +6,7 @@ import { classNames } from "@ember-decorators/component";
 import discourseComputed from "discourse-common/utils/decorators";
 import I18n from "discourse-i18n";
 import { getColors } from "discourse/plugins/poll/lib/chart-colors";
-import { PIE_CHART_TYPE } from "../components/modal/poll-ui-builder";
+import { PIE_CHART_TYPE } from "./modal/poll-ui-builder";
 
 @classNames("poll-breakdown-chart-container")
 export default class PollBreakdownChart extends Component {

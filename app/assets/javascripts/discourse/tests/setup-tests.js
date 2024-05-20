@@ -11,7 +11,7 @@ import {
 } from "@ember/test-helpers";
 import "bootstrap/js/modal";
 import bootbox from "bootbox";
-import { addModuleExcludeMatcher } from "ember-cli-test-loader/test-support/index";
+import { addModuleExcludeMatcher } from "ember-cli-test-loader/test-support";
 import $ from "jquery";
 import MessageBus from "message-bus-client";
 import QUnit from "qunit";
