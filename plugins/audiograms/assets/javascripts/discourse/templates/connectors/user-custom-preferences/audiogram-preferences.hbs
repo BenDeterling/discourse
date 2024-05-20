@@ -1,0 +1,23 @@
+{{#if siteSettings.audiograms_enabled}}
+  <div class="control-group audiograms">
+    <label class="control-label">{{i18n "audiograms.enable_audiograms"}}</label>
+    <div class="controls">
+      <label class="checkbox-label">
+        <Input @type="checkbox" @checked={{model.see_audiograms}} />
+        {{i18n "audiograms.show_audiograms"}}
+      </label>
+    </div>
+  </div>
+  <div class="control-group audiograms">
+    <label class="control-label">{{i18n "audiograms.my_audiogram"}}</label>
+    <div class="controls bio-composer input-xxlarge">
+      <label class="text-label">
+        <Input
+          @type="text"
+          class="input-xxlarge"
+          @value={{model.custom_fields.audiogram_url}}
+        />
+      </label>
+    </div>
+  </div>
+{{/if}}
