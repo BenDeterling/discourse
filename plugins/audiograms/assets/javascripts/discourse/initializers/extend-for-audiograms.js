@@ -1,6 +1,6 @@
 import { isEmpty } from "@ember/utils";
 import { withPluginApi } from "discourse/lib/plugin-api";
-
+/*
 function attachAudiogram(api, siteSettings) {
     api.includePostAttributes("user_audiogram");
   
@@ -30,7 +30,14 @@ function attachAudiogram(api, siteSettings) {
       }
     });
 }
+*/
+function attachAudiogram(api, siteSettings) {
+  api.includePostAttributes("user_audiogram");
 
+  api.decorateWidget("poster-name:after", (dec) => {
+    return ['Audiogram URL!'];
+  });
+}
 
 function addSetting(api) {
     api.modifyClass("controller:preferences/profile", {
