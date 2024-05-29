@@ -35,7 +35,12 @@ function attachAudiogram(api, siteSettings) {
   api.includePostAttributes("user_audiogram");
 
   api.decorateWidget("poster-name:after", (dec) => {
-    return ['Audiogram URL!'];
+    return [
+      dec.h("hr"),
+      dec.h("audiogram", {
+        attributes: { src: attrs.user_audiogram },
+      }),
+    ];
   });
 }
 
