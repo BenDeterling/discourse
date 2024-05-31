@@ -31,16 +31,41 @@ function attachAudiogram(api, siteSettings) {
     });
 }
 */
-function attachAudiogram(api, siteSettings) {
-  api.includePostAttributes("user_audiogram");
+console.log('made it to the popiup code')
+/*
+const popupTriggerAudiogram = document.querySelector('.popup-trigger-audiogram');
+popupTriggerAudiogram.addEventListener('click', openAudiogramPopup);
+const closePopupAudiogram = document.querySelector('.close-popup-audiogram');
+closePopupAudiogram.addEventListener('click', closeAudiogramPopup);
+*/
+document.addEventListener('click', (e) => {
+  console.log('click: %o', e);
+  if (e.target.classList.contains('popup-trigger-audiogram')) {
+    console.log('made it into if in eventlistener')
+    openAudiogramPopup(e);
+  };
+});
 
+function openAudiogramPopup(e) {
+  console.log('before e prevent default')
+  e.preventDefault();
+  console.log('after e prevent default')
+  alert('test');
+  const popup = document.querySelector('.popup-audiogram');
+  popup.style.display = 'block';
+}
+
+function closeAudiogramPopup() {
+  const popup = document.querySelector('.popup-audiogram');
+  popup.style.display = 'none';
+}
+
+function attachAudiogram(api, siteSettings) {
+  api.includePostAttributes("audiogram");
+  
   api.decorateWidget("poster-name:after", (dec) => {
-    return [
-      dec.h("hr"),
-      dec.h("audiogram", {
-        attributes: { src: attrs.user_audiogram },
-      }),
-    ];
+      /*console.log(dec.attrs.audiogram)*/
+      return dec.h('span', dec.attrs.audiogram)
   });
 }
 

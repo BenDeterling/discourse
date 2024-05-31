@@ -25,7 +25,7 @@ after_initialize do
     register_editable_user_custom_field :audiogram if defined? register_editable_user_custom_field
     
     if SiteSetting.audiograms_enabled then
-      add_to_serializer(:post, :user_audiogram, false) {
+      add_to_serializer(:post, :audiogram, false) {
         object.user.custom_fields['audiogram']
       }
   
