@@ -13,851 +13,956 @@
     <div class="controls">
         <button class="popup-trigger-audiogram">Create Audiogram</button>
         <div class="popup-audiogram" style="display: none;">
-          <form role="form" class="edit_audio" id="edit_audio_3746" action="/audios/3746" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="patch" autocomplete="off" /><input type="hidden" name="authenticity_token" value="GmxpRkjD6W3wnVbTsgD5Dc7d9jk7M7A8T4TxVQIS0OCGNnJWY7FomPnkuL4I1-17_JW2rSNh2vvY1xwF1QcT2w" autocomplete="off" />
-            <div class='row mt-4'>
-              <div class='col-md-6 col-sm-6'>
-                <div class="form-group"><label class="required" for="audio_test_date">What date was your hearing tested?</label><input value="2024-05-01" class="form-control" type="date" name="audio[test_date]" id="audio_test_date" /></div>
-              </div>
-            </div>
-
-            <div class='row'>
-              <div class='col-md-12'>
-                <h3 class='mt-4'>
-                  Hearing Loss Thresholds
-                </h3>
-                <hr style='margin-top:0' />
-              </div>
-              <div class='col-md-6 col-sm-6'>
-                <h5>Left Ear Results</h5>
-                <div class="form-group"><label for="audio_acl250hz">250Hz</label><select class="form-control" name="audio[acl250hz]" id="audio_acl250hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option selected="selected" value="120">120 dB</option></select></div>
-                  <div class="form-group"><label class="required" for="audio_acl500hz">500Hz</label><select class="form-control" name="audio[acl500hz]" id="audio_acl500hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option selected="selected" value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option value="120">120 dB</option></select></div>
-                  <div class="form-group"><label for="audio_acl750hz">750Hz</label><select class="form-control" name="audio[acl750hz]" id="audio_acl750hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option selected="selected" value="120">120 dB</option></select></div>
-                  <div class="form-group"><label class="required" for="audio_acl1000hz">1000Hz</label><select class="form-control" name="audio[acl1000hz]" id="audio_acl1000hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option selected="selected" value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option value="120">120 dB</option></select></div>
-                  <div class="form-group"><label for="audio_acl1500hz">1500Hz</label><select class="form-control" name="audio[acl1500hz]" id="audio_acl1500hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option selected="selected" value="120">120 dB</option></select></div>
-                  <div class="form-group"><label class="required" for="audio_acl2000hz">2000Hz</label><select class="form-control" name="audio[acl2000hz]" id="audio_acl2000hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option selected="selected" value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option value="120">120 dB</option></select></div>
-                  <div class="form-group"><label for="audio_acl3000hz">3000Hz</label><select class="form-control" name="audio[acl3000hz]" id="audio_acl3000hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option selected="selected" value="120">120 dB</option></select></div>
-                  <div class="form-group"><label class="required" for="audio_acl4000hz">4000Hz</label><select class="form-control" name="audio[acl4000hz]" id="audio_acl4000hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option selected="selected" value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option value="120">120 dB</option></select></div>
-                  <div class="form-group"><label for="audio_acl6000hz">6000Hz</label><select class="form-control" name="audio[acl6000hz]" id="audio_acl6000hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option selected="selected" value="120">120 dB</option></select></div>
-                  <div class="form-group"><label for="audio_acl8000hz">8000Hz</label><select class="form-control" name="audio[acl8000hz]" id="audio_acl8000hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option selected="selected" value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option value="120">120 dB</option></select></div>
+        <form role="form" class="edit_audio" id="edit_audio_3746" action="/audios/3746" accept-charset="UTF-8" method="post">
+                <input type="hidden" name="_method" value="patch" autocomplete="off" /><input type="hidden"
+                        name="authenticity_token"
+                        value="GmxpRkjD6W3wnVbTsgD5Dc7d9jk7M7A8T4TxVQIS0OCGNnJWY7FomPnkuL4I1-17_JW2rSNh2vvY1xwF1QcT2w"
+                        autocomplete="off" />
+                <div class='row mt-4'>
+                        <div class='col-md-6 col-sm-6'>
+                                <div class="form-group"><label class="required" for="audio_test_date">What date was your hearing
+                                                tested?</label><input value="2024-05-01" class="form-control" type="date"
+                                                name="audio[test_date]" id="audio_test_date" /></div>
+                        </div>
                 </div>
-
-                <div class='col-md-6 col-sm-6'>
-                  <h5>Right Ear Results</h5>
-                  <div class="form-group"><label for="audio_acr250hz">250Hz</label><select class="form-control" name="audio[acr250hz]" id="audio_acr250hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option selected="selected" value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option value="120">120 dB</option></select></div>
-                  <div class="form-group"><label class="required" for="audio_acr500hz">500Hz</label><select class="form-control" name="audio[acr500hz]" id="audio_acr500hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option selected="selected" value="120">120 dB</option></select></div>
-                  <div class="form-group"><label for="audio_acr750hz">750Hz</label><select class="form-control" name="audio[acr750hz]" id="audio_acr750hz"><option value="">-</option>
-          <option selected="selected" value="-10">-10 dB</option>
-          <option value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option value="120">120 dB</option></select></div>
-                  <div class="form-group"><label class="required" for="audio_acr1000hz">1000Hz</label><select class="form-control" name="audio[acr1000hz]" id="audio_acr1000hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option selected="selected" value="120">120 dB</option></select></div>
-                  <div class="form-group"><label for="audio_acr1500hz">1500Hz</label><select class="form-control" name="audio[acr1500hz]" id="audio_acr1500hz"><option value="">-</option>
-          <option selected="selected" value="-10">-10 dB</option>
-          <option value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option value="120">120 dB</option></select></div>
-                  <div class="form-group"><label class="required" for="audio_acr2000hz">2000Hz</label><select class="form-control" name="audio[acr2000hz]" id="audio_acr2000hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option selected="selected" value="120">120 dB</option></select></div>
-                  <div class="form-group"><label for="audio_acr3000hz">3000Hz</label><select class="form-control" name="audio[acr3000hz]" id="audio_acr3000hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option selected="selected" value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option value="120">120 dB</option></select></div>
-                  <div class="form-group"><label class="required" for="audio_acr4000hz">4000Hz</label><select class="form-control" name="audio[acr4000hz]" id="audio_acr4000hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option selected="selected" value="120">120 dB</option></select></div>
-                  <div class="form-group"><label for="audio_acr6000hz">6000Hz</label><select class="form-control" name="audio[acr6000hz]" id="audio_acr6000hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option selected="selected" value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option value="120">120 dB</option></select></div>
-                  <div class="form-group"><label for="audio_acr8000hz">8000Hz</label><select class="form-control" name="audio[acr8000hz]" id="audio_acr8000hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option selected="selected" value="120">120 dB</option></select></div>
+        
+                <div class='row'>
+                        <div class='col-md-12'>
+                                <h3 class='mt-4'>
+                                        Hearing Loss Thresholds
+                                </h3>
+                                <hr style='margin-top:0' />
+                        </div>
+                        <div class='col-md-6 col-sm-6'>
+                                <h5>Left Ear Results</h5>
+                                <div class="form-group"><label for="audio_acl250hz">250Hz</label><select class="form-control"
+                                                name="audio[acl250hz]" id="audio_acl250hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option selected="selected" value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label class="required" for="audio_acl500hz">500Hz</label><select
+                                                class="form-control" name="audio[acl500hz]" id="audio_acl500hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option selected="selected" value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label for="audio_acl750hz">750Hz</label><select class="form-control"
+                                                name="audio[acl750hz]" id="audio_acl750hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option selected="selected" value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label class="required" for="audio_acl1000hz">1000Hz</label><select
+                                                class="form-control" name="audio[acl1000hz]" id="audio_acl1000hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option selected="selected" value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label for="audio_acl1500hz">1500Hz</label><select class="form-control"
+                                                name="audio[acl1500hz]" id="audio_acl1500hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option selected="selected" value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label class="required" for="audio_acl2000hz">2000Hz</label><select
+                                                class="form-control" name="audio[acl2000hz]" id="audio_acl2000hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option selected="selected" value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label for="audio_acl3000hz">3000Hz</label><select class="form-control"
+                                                name="audio[acl3000hz]" id="audio_acl3000hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option selected="selected" value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label class="required" for="audio_acl4000hz">4000Hz</label><select
+                                                class="form-control" name="audio[acl4000hz]" id="audio_acl4000hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option selected="selected" value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label for="audio_acl6000hz">6000Hz</label><select class="form-control"
+                                                name="audio[acl6000hz]" id="audio_acl6000hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option selected="selected" value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label for="audio_acl8000hz">8000Hz</label><select class="form-control"
+                                                name="audio[acl8000hz]" id="audio_acl8000hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option selected="selected" value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option value="120">120 dB</option>
+                                        </select></div>
+                        </div>
+        
+                        <div class='col-md-6 col-sm-6'>
+                                <h5>Right Ear Results</h5>
+                                <div class="form-group"><label for="audio_acr250hz">250Hz</label><select class="form-control"
+                                                name="audio[acr250hz]" id="audio_acr250hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option selected="selected" value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label class="required" for="audio_acr500hz">500Hz</label><select
+                                                class="form-control" name="audio[acr500hz]" id="audio_acr500hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option selected="selected" value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label for="audio_acr750hz">750Hz</label><select class="form-control"
+                                                name="audio[acr750hz]" id="audio_acr750hz">
+                                                <option value="">-</option>
+                                                <option selected="selected" value="-10">-10 dB</option>
+                                                <option value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label class="required" for="audio_acr1000hz">1000Hz</label><select
+                                                class="form-control" name="audio[acr1000hz]" id="audio_acr1000hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option selected="selected" value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label for="audio_acr1500hz">1500Hz</label><select class="form-control"
+                                                name="audio[acr1500hz]" id="audio_acr1500hz">
+                                                <option value="">-</option>
+                                                <option selected="selected" value="-10">-10 dB</option>
+                                                <option value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label class="required" for="audio_acr2000hz">2000Hz</label><select
+                                                class="form-control" name="audio[acr2000hz]" id="audio_acr2000hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option selected="selected" value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label for="audio_acr3000hz">3000Hz</label><select class="form-control"
+                                                name="audio[acr3000hz]" id="audio_acr3000hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option selected="selected" value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label class="required" for="audio_acr4000hz">4000Hz</label><select
+                                                class="form-control" name="audio[acr4000hz]" id="audio_acr4000hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option selected="selected" value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label for="audio_acr6000hz">6000Hz</label><select class="form-control"
+                                                name="audio[acr6000hz]" id="audio_acr6000hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option selected="selected" value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label for="audio_acr8000hz">8000Hz</label><select class="form-control"
+                                                name="audio[acr8000hz]" id="audio_acr8000hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option selected="selected" value="120">120 dB</option>
+                                        </select></div>
+                        </div>
                 </div>
-              </div>
-
-
-              <div class='row'>
-                <div class='col-md-12'>
-                  <h3 class='mt-4'>
-                    Optional: Bone Conduction Results
-                  </h3>
-                  <hr style='margin-top:0' />
+        
+        
+                <div class='row'>
+                        <div class='col-md-12'>
+                                <h3 class='mt-4'>
+                                        Optional: Bone Conduction Results
+                                </h3>
+                                <hr style='margin-top:0' />
+                        </div>
+                        <div class='col-md-6 col-sm-6'>
+                                <h5>Left Ear Results</h5>
+                                <div class="form-group"><label for="audio_bc_l_500Hz">500Hz</label><select class="form-control"
+                                                name="audio[bc_l_500Hz]" id="audio_bc_l_500Hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label for="audio_bc_l_1000Hz">1000Hz</label><select
+                                                class="form-control" name="audio[bc_l_1000Hz]" id="audio_bc_l_1000Hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label for="audio_bc_l_2000Hz">2000Hz</label><select
+                                                class="form-control" name="audio[bc_l_2000Hz]" id="audio_bc_l_2000Hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label for="audio_bc_l_4000Hz">4000Hz</label><select
+                                                class="form-control" name="audio[bc_l_4000Hz]" id="audio_bc_l_4000Hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option value="120">120 dB</option>
+                                        </select></div>
+                        </div>
+                        <div class='col-md-6 col-sm-6'>
+                                <h5>Right Ear Results</h5>
+                                <div class="form-group"><label for="audio_bc_r_500Hz">500Hz</label><select class="form-control"
+                                                name="audio[bc_r_500Hz]" id="audio_bc_r_500Hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label for="audio_bc_r_1000Hz">1000Hz</label><select
+                                                class="form-control" name="audio[bc_r_1000Hz]" id="audio_bc_r_1000Hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label for="audio_bc_r_2000Hz">2000Hz</label><select
+                                                class="form-control" name="audio[bc_r_2000Hz]" id="audio_bc_r_2000Hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option value="120">120 dB</option>
+                                        </select></div>
+                                <div class="form-group"><label for="audio_bc_r_4000Hz">4000Hz</label><select
+                                                class="form-control" name="audio[bc_r_4000Hz]" id="audio_bc_r_4000Hz">
+                                                <option value="">-</option>
+                                                <option value="-10">-10 dB</option>
+                                                <option value="-5">-5 dB</option>
+                                                <option value="0">0 dB</option>
+                                                <option value="5">5 dB</option>
+                                                <option value="10">10 dB</option>
+                                                <option value="15">15 dB</option>
+                                                <option value="20">20 dB</option>
+                                                <option value="25">25 dB</option>
+                                                <option value="30">30 dB</option>
+                                                <option value="35">35 dB</option>
+                                                <option value="40">40 dB</option>
+                                                <option value="45">45 dB</option>
+                                                <option value="50">50 dB</option>
+                                                <option value="55">55 dB</option>
+                                                <option value="60">60 dB</option>
+                                                <option value="65">65 dB</option>
+                                                <option value="70">70 dB</option>
+                                                <option value="75">75 dB</option>
+                                                <option value="80">80 dB</option>
+                                                <option value="85">85 dB</option>
+                                                <option value="90">90 dB</option>
+                                                <option value="95">95 dB</option>
+                                                <option value="100">100 dB</option>
+                                                <option value="105">105 dB</option>
+                                                <option value="110">110 dB</option>
+                                                <option value="115">115 dB</option>
+                                                <option value="120">120 dB</option>
+                                        </select></div>
+                        </div>
                 </div>
-                <div class='col-md-6 col-sm-6'>
-                  <h5>Left Ear Results</h5>
-                  <div class="form-group"><label for="audio_bc_l_500Hz">500Hz</label><select class="form-control" name="audio[bc_l_500Hz]" id="audio_bc_l_500Hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option value="120">120 dB</option></select></div>
-                  <div class="form-group"><label for="audio_bc_l_1000Hz">1000Hz</label><select class="form-control" name="audio[bc_l_1000Hz]" id="audio_bc_l_1000Hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option value="120">120 dB</option></select></div>
-                  <div class="form-group"><label for="audio_bc_l_2000Hz">2000Hz</label><select class="form-control" name="audio[bc_l_2000Hz]" id="audio_bc_l_2000Hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option value="120">120 dB</option></select></div>
-                  <div class="form-group"><label for="audio_bc_l_4000Hz">4000Hz</label><select class="form-control" name="audio[bc_l_4000Hz]" id="audio_bc_l_4000Hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option value="120">120 dB</option></select></div>
+        
+                <div class='row'>
+                        <div class='col-md-12'>
+                                <h3 class='mt-4'>
+                                        Optional: Word Recognition Score
+                                </h3>
+                                <hr style='margin-top:0' />
+                        </div>
+                        <div class='col-md-6 col-sm-6'>
+                                <h5>Left Ear Results</h5>
+                                <div class="form-group"><label for="audio_score_left">Score</label><input min="0" max="100"
+                                                placeholder="0-100%" class="form-control" type="number" name="audio[score_left]"
+                                                id="audio_score_left" /></div>
+                                <div class="form-group"><label for="audio_level_left">Level</label><input min="0" max="120"
+                                                placeholder="Decibel level in HL" class="form-control" type="number"
+                                                name="audio[level_left]" id="audio_level_left" /></div>
+                        </div>
+                        <div class='col-md-6 col-sm-6'>
+                                <h5>Right Ear Results</h5>
+                                <div class="form-group"><label for="audio_score_right">Score</label><input min="0" max="100"
+                                                placeholder="0-100%" class="form-control" type="number"
+                                                name="audio[score_right]" id="audio_score_right" /></div>
+                                <div class="form-group"><label for="audio_level_right">Level</label><input min="0" max="120"
+                                                placeholder="Decibel level in HL" class="form-control" type="number"
+                                                name="audio[level_right]" id="audio_level_right" /></div>
+                        </div>
+                        <div class='col-md-12'>
+                                <input type="submit" name="submit-audiogram" value="Save My Audiogram"
+                                        class="btn btn-info btn-block btn-lg submit-audiogram" style="margin-top:15px;"
+                                        data-disable-with="Save My Audiogram" />
+                        </div>
+                        <div class='col-md-12'>
+                                <input type="close" name="close-audiogram" value="Cancel"
+                                        class="btn btn-info btn-block btn-lg close-audiogram" style="margin-top:15px;"
+                                        data-disable-with="Cancel" />
+                        </div>
                 </div>
-                <div class='col-md-6 col-sm-6'>
-                  <h5>Right Ear Results</h5>
-                  <div class="form-group"><label for="audio_bc_r_500Hz">500Hz</label><select class="form-control" name="audio[bc_r_500Hz]" id="audio_bc_r_500Hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option value="120">120 dB</option></select></div>
-                  <div class="form-group"><label for="audio_bc_r_1000Hz">1000Hz</label><select class="form-control" name="audio[bc_r_1000Hz]" id="audio_bc_r_1000Hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option value="120">120 dB</option></select></div>
-                  <div class="form-group"><label for="audio_bc_r_2000Hz">2000Hz</label><select class="form-control" name="audio[bc_r_2000Hz]" id="audio_bc_r_2000Hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option value="120">120 dB</option></select></div>
-                  <div class="form-group"><label for="audio_bc_r_4000Hz">4000Hz</label><select class="form-control" name="audio[bc_r_4000Hz]" id="audio_bc_r_4000Hz"><option value="">-</option>
-          <option value="-10">-10 dB</option>
-          <option value="-5">-5 dB</option>
-          <option value="0">0 dB</option>
-          <option value="5">5 dB</option>
-          <option value="10">10 dB</option>
-          <option value="15">15 dB</option>
-          <option value="20">20 dB</option>
-          <option value="25">25 dB</option>
-          <option value="30">30 dB</option>
-          <option value="35">35 dB</option>
-          <option value="40">40 dB</option>
-          <option value="45">45 dB</option>
-          <option value="50">50 dB</option>
-          <option value="55">55 dB</option>
-          <option value="60">60 dB</option>
-          <option value="65">65 dB</option>
-          <option value="70">70 dB</option>
-          <option value="75">75 dB</option>
-          <option value="80">80 dB</option>
-          <option value="85">85 dB</option>
-          <option value="90">90 dB</option>
-          <option value="95">95 dB</option>
-          <option value="100">100 dB</option>
-          <option value="105">105 dB</option>
-          <option value="110">110 dB</option>
-          <option value="115">115 dB</option>
-          <option value="120">120 dB</option></select></div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col-md-12'>
-                  <h3 class='mt-4'>
-                    Optional: Word Recognition Score
-                  </h3>
-                  <hr style='margin-top:0' />
-                </div>
-                <div class='col-md-6 col-sm-6'>
-                  <h5>Left Ear Results</h5>
-                  <div class="form-group"><label for="audio_score_left">Score</label><input min="0" max="100" placeholder="0-100%" class="form-control" type="number" name="audio[score_left]" id="audio_score_left" /></div>
-                  <div class="form-group"><label for="audio_level_left">Level</label><input min="0" max="120" placeholder="Decibel level in HL" class="form-control" type="number" name="audio[level_left]" id="audio_level_left" /></div>
-                </div>
-                <div class='col-md-6 col-sm-6'>
-                  <h5>Right Ear Results</h5>
-                  <div class="form-group"><label for="audio_score_right">Score</label><input min="0" max="100" placeholder="0-100%" class="form-control" type="number" name="audio[score_right]" id="audio_score_right" /></div>
-                  <div class="form-group"><label for="audio_level_right">Level</label><input min="0" max="120" placeholder="Decibel level in HL" class="form-control" type="number" name="audio[level_right]" id="audio_level_right" /></div>
-                </div>
-                <div class='col-md-12'>
-                  <input type="submit" name="commit" value="Save My Audiogram" class="btn btn-info btn-block btn-lg" style="margin-top:15px;" data-disable-with="Save My Audiogram" />
-                </div>
-              </div>
-          </form> 
+        </form>
         </div>
     </div>
   </div>
