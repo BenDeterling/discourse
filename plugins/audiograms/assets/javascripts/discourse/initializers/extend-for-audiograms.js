@@ -1,4 +1,6 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
+import { HighCharts } from "//code.highcharts.com/4.2.3/highcharts.js"
+import { HighCharts_more } from "//code.highcharts.com/4.2.3/highcharts-more.js"
 
 document.addEventListener('click', (e) => {
   if (e.target.classList.contains('popup-trigger-audiogram')) {
@@ -116,9 +118,9 @@ function submitAudiogramForm(e) {
       );
     };
     currentUser.save().then(() => {
-      console.log('Custom user field updated successfully');
+      console.log('User audiogram updated successfully');
     }).catch(error => {
-      console.error('Error updating custom user field:', error);
+      console.error('Error updating user audiogram:', error);
     });
   });
   
