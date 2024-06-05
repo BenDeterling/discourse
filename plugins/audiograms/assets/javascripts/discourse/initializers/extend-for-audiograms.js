@@ -1,5 +1,5 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
-import Highcharts from "discourse/plugins/audiograms/assets/lib/highcharts";
+import loadScript from "discourse/lib/load-script";
 
 document.addEventListener('click', (e) => {
   if (e.target.classList.contains('popup-trigger-audiogram')) {
@@ -118,188 +118,191 @@ function submitAudiogramForm(e) {
 
 //build an audiogram chart
 function buildAudiogram(le_hlt, re_hlt) {
-  Highcharts.SVGRenderer.prototype.symbols.cross = function (x, y, w, h) {
-    return ['M', x, y, 'L', x + w, y + h, 'M', x + w, y, 'L', x, y + h, 'z'];
-  };
-  if (Highcharts.VMLRenderer) {
-    Highcharts.VMLRenderer.prototype.symbols.cross = Highcharts.SVGRenderer.prototype.symbols.cross;
-  };
-  var tones = ['250Hz', '500Hz', '1000Hz', '2000Hz', '4000Hz', '8000Hz'];
-  var chart = Highcharts.chart('audiogram_container', {
-    tooltip: false,
-    credits: false,
-    title: {
-      align: 'center',
-      text: '',
-      style: {
-        fontSize: '14px',
-        fontFamily: 'source_sans_probold, sans-serif'
-      }
-    },
-    xAxis: [{
-      tickmarkPlacement: 'on',
-      gridLineColor: '#ddd',
-      gridLineWidth: 1,
-      opposite: true,
-      categories: tones,
+
+  loadScript("/https://code.highcharts.com/highcharts.js/Chart.min.js").then(() => {
+    Highcharts.SVGRenderer.prototype.symbols.cross = function (x, y, w, h) {
+      return ['M', x, y, 'L', x + w, y + h, 'M', x + w, y, 'L', x, y + h, 'z'];
+    };
+    if (Highcharts.VMLRenderer) {
+      Highcharts.VMLRenderer.prototype.symbols.cross = Highcharts.SVGRenderer.prototype.symbols.cross;
+    };
+    var tones = ['250Hz', '500Hz', '1000Hz', '2000Hz', '4000Hz', '8000Hz'];
+    var chart = Highcharts.chart('audiogram_container', {
+      tooltip: false,
+      credits: false,
       title: {
-        text: null
+        align: 'center',
+        text: '',
+        style: {
+          fontSize: '14px',
+          fontFamily: 'source_sans_probold, sans-serif'
+        }
       },
-      min: 0,
-      max: 5
-    }, {
-      linkedTo: 0,
-      tickmarkPlacement: 'on',
-      gridLineColor: '#eee',
-      gridLineWidth: 1,
-      //tickPositions:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-      tickPositions: [1.5, 2.5, 3.5, 4.5],
-      labels: {
-        formatter: function () {
-          var v = this.value;
-          if (v == 1.5) return '750Hz';
-          else if (v == 2.5) return '1.5kHz';
-          else if (v == 3.5) return '3kHz';
-          else if (v == 4.5) return '6kHz';
-        }
-      }
-
-    }],
-
-    yAxis: {
-      allowDecimals: false,
-      reversed: true,
-      title: {
-        text: null
-      },
-      max: 120,
-      min: -10,
-      tickInterval: 10,
-    },
-
-    tooltip: {
-      crosshairs: true,
-      valueSuffix: 'dB',
-      formatter: function () {
-        var v = this.x;
-        if (v == 1.5) v = '750Hz';
-        else if (v == 2.5) v = '1500Hz';
-        else if (v == 3.5) v = '3000Hz';
-        else if (v == 4.5) v = '6000Hz';
-        if (this.point.color == "red" || this.point.color == "blue") {
-          return this.series.name + ':<br /><b>' + this.y + 'dB </b> at <b>' + v + '</b>';
-        } else {
-          return this.series.name;
-        }
-
-      }
-    },
-
-    legend: {
-      enabled: false
-    },
-    plotOptions: {
-      series: {
-        connectNulls: true
-      }
-
-    },
-    series: [
-
-      {
-        name: 'Right Ear Hearing Level',
-        data: re_hlt,
-        zIndex: 1,
-        color: 'red',
-        marker: {
-          fillColor: 'white',
-          lineWidth: 2,
-          lineColor: 'red'
-        }
+      xAxis: [{
+        tickmarkPlacement: 'on',
+        gridLineColor: '#ddd',
+        gridLineWidth: 1,
+        opposite: true,
+        categories: tones,
+        title: {
+          text: null
+        },
+        min: 0,
+        max: 5
       }, {
-        name: 'Left Ear Hearing Level',
-        data: le_hlt,
-        zIndex: 1,
-        color: 'blue',
-        marker: {
-          symbol: 'cross',
-          fillColor: 'white',
-          lineWidth: 2,
-          lineColor: 'blue'
+        linkedTo: 0,
+        tickmarkPlacement: 'on',
+        gridLineColor: '#eee',
+        gridLineWidth: 1,
+        //tickPositions:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        tickPositions: [1.5, 2.5, 3.5, 4.5],
+        labels: {
+          formatter: function () {
+            var v = this.value;
+            if (v == 1.5) return '750Hz';
+            else if (v == 2.5) return '1.5kHz';
+            else if (v == 3.5) return '3kHz';
+            else if (v == 4.5) return '6kHz';
+          }
+        }
+
+      }],
+
+      yAxis: {
+        allowDecimals: false,
+        reversed: true,
+        title: {
+          text: null
+        },
+        max: 120,
+        min: -10,
+        tickInterval: 10,
+      },
+
+      tooltip: {
+        crosshairs: true,
+        valueSuffix: 'dB',
+        formatter: function () {
+          var v = this.x;
+          if (v == 1.5) v = '750Hz';
+          else if (v == 2.5) v = '1500Hz';
+          else if (v == 3.5) v = '3000Hz';
+          else if (v == 4.5) v = '6000Hz';
+          if (this.point.color == "red" || this.point.color == "blue") {
+            return this.series.name + ':<br /><b>' + this.y + 'dB </b> at <b>' + v + '</b>';
+          } else {
+            return this.series.name;
+          }
+
         }
       },
 
-      {
-        type: 'arearange',
-        name: 'Normal hearing',
-        data: getHearingRange('normal'),
-        lineWidth: 0,
-        linkedTo: ':previous',
-        color: '#7ebefa',
-        fillOpacity: 0.3,
-        zIndex: 0
+      legend: {
+        enabled: false
       },
-      {
-        type: 'arearange',
-        name: 'Slight hearing loss range',
-        data: getHearingRange('slight'),
-        lineWidth: 0,
-        linkedTo: ':previous',
-        color: '#91a2d5',
-        fillOpacity: 0.3,
-        zIndex: 0
+      plotOptions: {
+        series: {
+          connectNulls: true
+        }
+
       },
-      {
-        type: 'arearange',
-        name: 'Mild hearing loss range',
-        data: getHearingRange('mild'),
-        lineWidth: 0,
-        linkedTo: ':previous',
-        color: '#a77ea4',
-        fillOpacity: 0.3,
-        zIndex: 0
-      },
-      {
-        type: 'arearange',
-        name: 'Moderate hearing loss range',
-        data: getHearingRange('moderate'),
-        lineWidth: 0,
-        linkedTo: ':previous',
-        color: '#ba5f7d',
-        fillOpacity: 0.3,
-        zIndex: 0
-      },
-      {
-        type: 'arearange',
-        name: 'Moderately-severe hearing loss range',
-        data: getHearingRange('moderately-severe'),
-        lineWidth: 0,
-        linkedTo: ':previous',
-        color: '#cc4358',
-        fillOpacity: 0.3,
-        zIndex: 0
-      },
-      {
-        type: 'arearange',
-        name: 'Severe hearing loss range',
-        data: getHearingRange('severe'),
-        lineWidth: 0,
-        linkedTo: ':previous',
-        color: '#dd2733',
-        fillOpacity: 0.3,
-        zIndex: 0
-      },
-      {
-        type: 'arearange',
-        name: 'Profound hearing loss range',
-        data: getHearingRange('profound'),
-        lineWidth: 0,
-        linkedTo: ':previous',
-        color: '#f40203',
-        fillOpacity: 0.3,
-        zIndex: 0
-      }
-    ]
+      series: [
+
+        {
+          name: 'Right Ear Hearing Level',
+          data: re_hlt,
+          zIndex: 1,
+          color: 'red',
+          marker: {
+            fillColor: 'white',
+            lineWidth: 2,
+            lineColor: 'red'
+          }
+        }, {
+          name: 'Left Ear Hearing Level',
+          data: le_hlt,
+          zIndex: 1,
+          color: 'blue',
+          marker: {
+            symbol: 'cross',
+            fillColor: 'white',
+            lineWidth: 2,
+            lineColor: 'blue'
+          }
+        },
+
+        {
+          type: 'arearange',
+          name: 'Normal hearing',
+          data: getHearingRange('normal'),
+          lineWidth: 0,
+          linkedTo: ':previous',
+          color: '#7ebefa',
+          fillOpacity: 0.3,
+          zIndex: 0
+        },
+        {
+          type: 'arearange',
+          name: 'Slight hearing loss range',
+          data: getHearingRange('slight'),
+          lineWidth: 0,
+          linkedTo: ':previous',
+          color: '#91a2d5',
+          fillOpacity: 0.3,
+          zIndex: 0
+        },
+        {
+          type: 'arearange',
+          name: 'Mild hearing loss range',
+          data: getHearingRange('mild'),
+          lineWidth: 0,
+          linkedTo: ':previous',
+          color: '#a77ea4',
+          fillOpacity: 0.3,
+          zIndex: 0
+        },
+        {
+          type: 'arearange',
+          name: 'Moderate hearing loss range',
+          data: getHearingRange('moderate'),
+          lineWidth: 0,
+          linkedTo: ':previous',
+          color: '#ba5f7d',
+          fillOpacity: 0.3,
+          zIndex: 0
+        },
+        {
+          type: 'arearange',
+          name: 'Moderately-severe hearing loss range',
+          data: getHearingRange('moderately-severe'),
+          lineWidth: 0,
+          linkedTo: ':previous',
+          color: '#cc4358',
+          fillOpacity: 0.3,
+          zIndex: 0
+        },
+        {
+          type: 'arearange',
+          name: 'Severe hearing loss range',
+          data: getHearingRange('severe'),
+          lineWidth: 0,
+          linkedTo: ':previous',
+          color: '#dd2733',
+          fillOpacity: 0.3,
+          zIndex: 0
+        },
+        {
+          type: 'arearange',
+          name: 'Profound hearing loss range',
+          data: getHearingRange('profound'),
+          lineWidth: 0,
+          linkedTo: ':previous',
+          color: '#f40203',
+          fillOpacity: 0.3,
+          zIndex: 0
+        }
+      ]
+    });
   });
   return chart;
 }
