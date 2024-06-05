@@ -272,3 +272,6 @@ gem "csv", require: false
 # dependencies for the automation plugin
 gem "iso8601"
 gem "rrule"
+
+# dependencies for the audiogram plugin
+gem "highcharts-rails", "~> 6.0", ">= 6.0.3"

@@ -9,6 +9,8 @@ enabled_site_setting :audiograms_enabled
 DiscoursePluginRegistry.serialized_current_user_fields << "see_audiograms"
 DiscoursePluginRegistry.serialized_current_user_fields << "audiogram"
 
+register_asset 'plugins/assets/lib/highcharts';
+
 after_initialize do
     public_user_custom_fields_setting = SiteSetting.public_user_custom_fields
     if public_user_custom_fields_setting.empty?
