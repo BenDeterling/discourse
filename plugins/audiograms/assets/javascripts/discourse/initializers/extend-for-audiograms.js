@@ -196,7 +196,15 @@ function displayAudiogram(e) {
     var audiogram_link = document.getElementById('audiogram-link');
     audiogram_div.classList.add('audiogram-div');
     audiogram_div.style.display = "none";
-    audiogram_link.appendChild(audiogram_div);
+    audiogram_div.style.position = "absolute";
+    audiogram_div.style.backgroundColor = "lightblue";
+    audiogram_div.style.padding = "10px";
+    audiogram_div.style.border = "1px solid black";
+    audiogram_div.style.borderRadius = "5px";
+    var linkRect = audiogram_link.getBoundingClientRect();
+    audiogram_div.style.top = (linkRect.top + linkRect.height) + "px";
+    audiogram_div.style.left = linkRect.left + "px"; 
+    document.body.appendChild(audiogram_div);
 
     //generate plot
     Promise.all([
@@ -227,7 +235,7 @@ function buildAudiogram(le_hlt, re_hlt, container) {
     credits: false,
     title: {
       align: 'center',
-      text: '',
+      text: 'Audiogram',
       style: {
         fontSize: '14px',
         fontFamily: 'source_sans_probold, sans-serif'
@@ -255,9 +263,9 @@ function buildAudiogram(le_hlt, re_hlt, container) {
         formatter: function () {
           var v = this.value;
           if (v == 1.5) return '750Hz';
-          else if (v == 2.5) return '1.5kHz';
-          else if (v == 3.5) return '3kHz';
-          else if (v == 4.5) return '6kHz';
+          else if (v == 2.5) return '1500Hz';
+          else if (v == 3.5) return '3000Hz';
+          else if (v == 4.5) return '6000Hz';
         }
       }
 
