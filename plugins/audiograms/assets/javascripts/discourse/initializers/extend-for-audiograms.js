@@ -2,6 +2,7 @@ import { withPluginApi } from "discourse/lib/plugin-api";
 import loadScript from "discourse/lib/load-script";
 
 document.addEventListener('click', (e) => {
+  //var audiogram_div = document.getElementById('audiogram-div');
   if (e.target.classList.contains('popup-trigger-audiogram')) {
     openAudiogramPopup(e);
   } else if (e.target.classList.contains('submit-audiogram')) { 
@@ -10,7 +11,25 @@ document.addEventListener('click', (e) => {
   else if (e.target.id === 'audiogram-link') {
     displayAudiogram(e);
   }
+  else if (e.target.id != 'audiogram-div' && isAudiogramDisplayed()) {
+    var audiogram_div = getAudiogramDiv();
+    audiogram_div.style.display = 'none';
+  }
 });
+
+function isAudiogramDisplayed() {
+  var audiogram_div = document.getElementById('audiogram-div');
+  if (audiogram_div.style.display != 'none') {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+function getAudiogramDiv() {
+  var audiogram_div = document.getElementById('audiogram-div');
+  return audiogram_div;
+};
 
 //show the audiogram form when the button is clicked
 function openAudiogramPopup(e) {
@@ -189,12 +208,13 @@ function displayAudiogram(e) {
       var audiogram_json = currentUser.get("custom_fields.audiogram");
     } else {var audiogram_json = ""};
     var audiogram_data = JSON.parse(audiogram_json);
-    console.log('grabbed audiogram:', audiogram_data);
+    //console.log('grabbed audiogram:', audiogram_data);
 
     //create div to renderTo
     var audiogram_div = document.createElement('div');
     var audiogram_link = document.getElementById('audiogram-link');
     audiogram_div.classList.add('audiogram-div');
+    audiogram_div.id = "audiogram-div";
     audiogram_div.style.display = "none";
     audiogram_div.style.position = "absolute";
     audiogram_div.style.backgroundColor = "lightblue";
@@ -210,13 +230,13 @@ function displayAudiogram(e) {
     Promise.all([
       loadScript("https://code.highcharts.com/11.4.3/highcharts.js"),
       loadScript("https://code.highcharts.com/11.4.3/highcharts-more.js")]).then(() => {
-        console.log('after highcharts import')
+        //console.log('after highcharts import')
         var chart = buildAudiogram(audiogram_data.le_hlt, audiogram_data.re_hlt, audiogram_div);
-        console.log('after chart made');
+        //console.log('after chart made');
 
         //append to audiogram div
         audiogram_div.style.display = "block";
-        console.log('after div shown');
+        //console.log('after div shown');
       });
   });
 }
@@ -248,7 +268,7 @@ function buildAudiogram(le_hlt, re_hlt, container) {
       opposite: true,
       categories: tones,
       title: {
-        text: null
+        text: 'Freq (Hz)'
       },
       min: 0,
       max: 5
@@ -275,7 +295,7 @@ function buildAudiogram(le_hlt, re_hlt, container) {
       allowDecimals: false,
       reversed: true,
       title: {
-        text: null
+        text: 'Decibles (dB)'
       },
       max: 120,
       min: -10,
@@ -409,22 +429,6 @@ function buildAudiogram(le_hlt, re_hlt, container) {
 return chart;
 }
 
-function addSetting(api) {
-    api.modifyClass("controller:preferences/profile", {
-      pluginId: "discourse-audiograms",
-  
-      actions: {
-        save() {
-          this.set(
-            "model.custom_fields.see_audiograms",
-            this.get("model.see_audiograms")
-          );
-          this.get("saveAttrNames").push("custom_fields");
-          this._super();
-        },
-      },
-    });
-  }
   
 export default {
   name: "extend-for-audiograms",
@@ -432,7 +436,7 @@ export default {
     const siteSettings = container.lookup("service:site-settings");
     if (siteSettings.audiograms_enabled) {
       withPluginApi("0.1", (api) => attachAudiogramLink(api, siteSettings));
-      withPluginApi("0.1", (api) => addSetting(api, siteSettings));
+      //withPluginApi("0.1", (api) => addSetting(api, siteSettings));
     }
   },
 };
