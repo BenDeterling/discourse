@@ -2,34 +2,23 @@ import { withPluginApi } from "discourse/lib/plugin-api";
 import loadScript from "discourse/lib/load-script";
 
 document.addEventListener('click', (e) => {
-  //var audiogram_div = document.getElementById('audiogram-div');
   if (e.target.classList.contains('popup-trigger-audiogram')) {
     openAudiogramPopup(e);
-  } else if (e.target.classList.contains('submit-audiogram')) { 
+  } else if (e.target.classList.contains('submit-audiogram')) {
     submitAudiogramForm(e);
   }
-  else if (e.target.id === 'audiogram-link') {
+  else if (e.target.classList.contains('audiogram-link')) {
     displayAudiogram(e);
   }
-  else if (e.target.id != 'audiogram-div' && isAudiogramDisplayed()) {
-    var audiogram_div = getAudiogramDiv();
-    audiogram_div.style.display = 'none';
-  }
+  else if (!e.target.classList.contains('audiogram-div')) {
+    const audiogram_div_list = document.getElementsByClassName('audiogram-div');
+    for (var audiogram_div of audiogram_div_list) {
+      if (audiogram_div) {
+        audiogram_div.style.display = 'none';
+      };
+    };
+  };
 });
-
-function isAudiogramDisplayed() {
-  var audiogram_div = document.getElementById('audiogram-div');
-  if (audiogram_div.style.display != 'none') {
-    return true;
-  } else {
-    return false;
-  }
-};
-
-function getAudiogramDiv() {
-  var audiogram_div = document.getElementById('audiogram-div');
-  return audiogram_div;
-};
 
 //show the audiogram form when the button is clicked
 function openAudiogramPopup(e) {
@@ -38,7 +27,7 @@ function openAudiogramPopup(e) {
   popup.style.display = 'block';
 };
 
-//close the audiogram form when close is clicked - TODO
+//close the audiogram form when close is clicked
 function closeAudiogramPopup(e) {
   e.preventDefault();
   const popup = document.querySelector('.popup-audiogram');
@@ -95,23 +84,23 @@ function submitAudiogramForm(e) {
 
   //in the form used by Highcharts
   //data: [[0, -5], [1, 120], [1.5, -10], [2, 120], [2.5, -10], [3, 120], [3.5, -5], [4, 120], [4.5, -5], [5, 120]],
-  var le_hlt_str = [[0 , le_hlt_250hz],  [1 , le_hlt_500hz], [1.5 , le_hlt_750hz], [2 , le_hlt_1000hz], [2.5 , le_hlt_1500hz], 
-  [3 , le_hlt_2000hz], [3.5 , le_hlt_3000hz], [4 , le_hlt_4000hz], [4.5 , le_hlt_6000hz], [5 , le_hlt_8000hz]];
-  var re_hlt_str = [[0 , re_hlt_250hz],  [1 , re_hlt_500hz], [1.5 , re_hlt_750hz], [2 , re_hlt_1000hz], [2.5 , re_hlt_1500hz], 
-  [3 , re_hlt_2000hz], [3.5 , re_hlt_3000hz], [4 , re_hlt_4000hz], [4.5 , re_hlt_6000hz], [5 , re_hlt_8000hz]];
-  
+  var le_hlt_str = [[0, le_hlt_250hz], [1, le_hlt_500hz], [1.5, le_hlt_750hz], [2, le_hlt_1000hz], [2.5, le_hlt_1500hz],
+  [3, le_hlt_2000hz], [3.5, le_hlt_3000hz], [4, le_hlt_4000hz], [4.5, le_hlt_6000hz], [5, le_hlt_8000hz]];
+  var re_hlt_str = [[0, re_hlt_250hz], [1, re_hlt_500hz], [1.5, re_hlt_750hz], [2, re_hlt_1000hz], [2.5, re_hlt_1500hz],
+  [3, re_hlt_2000hz], [3.5, re_hlt_3000hz], [4, re_hlt_4000hz], [4.5, re_hlt_6000hz], [5, re_hlt_8000hz]];
+
   //to float
-  var le_hlt = le_hlt_str.map(function(innerArray) {
+  var le_hlt = le_hlt_str.map(function (innerArray) {
     return [innerArray[0], parseFloat(innerArray[1])];
   });
-  var re_hlt = re_hlt_str.map(function(innerArray) {
+  var re_hlt = re_hlt_str.map(function (innerArray) {
     return [innerArray[0], parseFloat(innerArray[1])];
   });
 
   var formData = {
-    "date_tested" : date_tested,
-    "le_hlt" : le_hlt,
-    "re_hlt" : re_hlt,
+    "date_tested": date_tested,
+    "le_hlt": le_hlt,
+    "re_hlt": re_hlt,
     "le_bc_500hz": le_bc_500hz,
     "le_bc_1000hz": le_bc_1000hz,
     "le_bc_2000hz": le_bc_2000hz,
@@ -120,13 +109,13 @@ function submitAudiogramForm(e) {
     "re_bc_1000hz": re_bc_1000hz,
     "re_bc_2000hz": re_bc_2000hz,
     "re_bc_4000hz": re_bc_4000hz,
-    "le_wr_score" : le_wr_score,
-    "le_wr_level" : le_wr_level,
-    "re_wr_score" : re_wr_score,
-    "re_wr_level" : re_wr_level,
+    "le_wr_score": le_wr_score,
+    "le_wr_level": le_wr_level,
+    "re_wr_score": re_wr_score,
+    "re_wr_level": re_wr_level,
   };
 
-  var formDataJSON = JSON.stringify(formData)
+  const formDataJSON = JSON.stringify(formData)
 
   //attach formData to custom user field
   withPluginApi("0.1", (api) => {
@@ -144,7 +133,7 @@ function submitAudiogramForm(e) {
       console.error('Error updating user audiogram:', error);
     });
   });
-  
+
   form.reset();
   closeAudiogramPopup(e);
 }
@@ -154,39 +143,39 @@ function getHearingRange(severity) {
   var minThreshold, maxThreshold;
 
   switch (severity) {
-      case 'normal':
-          minThreshold = -10;
-          maxThreshold = 15;
-          break;
-      case 'slight':
-          minThreshold = 16;
-          maxThreshold = 25;
-          break;
-      case 'mild':
-          minThreshold = 26;
-          maxThreshold = 40;
-          break;
-      case 'moderate':
-          minThreshold = 41;
-          maxThreshold = 55;
-          break;
-      case 'moderately-severe':
-          minThreshold = 56;
-          maxThreshold = 70;
-          break;
-      case 'severe':
-          minThreshold = 71;
-          maxThreshold = 90;
-          break;
-      case 'profound':
-          minThreshold = 91;
-          maxThreshold = 120;
-          break;
+    case 'normal':
+      minThreshold = -10;
+      maxThreshold = 15;
+      break;
+    case 'slight':
+      minThreshold = 16;
+      maxThreshold = 25;
+      break;
+    case 'mild':
+      minThreshold = 26;
+      maxThreshold = 40;
+      break;
+    case 'moderate':
+      minThreshold = 41;
+      maxThreshold = 55;
+      break;
+    case 'moderately-severe':
+      minThreshold = 56;
+      maxThreshold = 70;
+      break;
+    case 'severe':
+      minThreshold = 71;
+      maxThreshold = 90;
+      break;
+    case 'profound':
+      minThreshold = 91;
+      maxThreshold = 120;
+      break;
   }
 
   var a = [];
-  [0, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5].forEach(function(x) {
-      a.push([x, minThreshold, maxThreshold]);
+  [0, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5].forEach(function (x) {
+    a.push([x, minThreshold, maxThreshold]);
   });
 
   return a;
@@ -195,51 +184,51 @@ function getHearingRange(severity) {
 //attach audiogram link to user posts
 function attachAudiogramLink(api, siteSettings) {
   api.decorateWidget("poster-name:after", (dec) => {
-    return dec.h('a', { href: '#', text: 'Audiogram', id: 'audiogram-link'});
+    let user_audiogram = dec.attrs.userCustomFields.audiogram;
+    let user_id = dec.attrs.user.id;
+    return dec.h('a.audiogram-link', { href: '#', text: 'Audiogram', attributes: {'data-id': user_id, 'data-audiogram': user_audiogram }});
   });
 }
 
 //add audiogram container to link element
 function displayAudiogram(e) {
-  withPluginApi("0.1", (api) => {
-    api.includePostAttributes("audiogram");
-    const currentUser = api.getCurrentUser();
-    if (currentUser) {
-      var audiogram_json = currentUser.get("custom_fields.audiogram");
-    } else {var audiogram_json = ""};
-    var audiogram_data = JSON.parse(audiogram_json);
-    //console.log('grabbed audiogram:', audiogram_data);
-
-    //create div to renderTo
-    var audiogram_div = document.createElement('div');
-    var audiogram_link = document.getElementById('audiogram-link');
+  e.preventDefault();
+  const audiogram_raw = e.target.dataset.audiogram;
+  const user_id = e.target.dataset.id;
+  let audiogram_link = e.target;
+  const audiogram_data = JSON.parse(audiogram_raw);
+  //create div to render to
+  let audiogram_div = document.getElementById('audiogram-div-' + user_id);
+  if (!audiogram_div) {
+    audiogram_div = document.createElement('div');
     audiogram_div.classList.add('audiogram-div');
-    audiogram_div.id = "audiogram-div";
+    audiogram_div.id = "audiogram-div-" + user_id;
     audiogram_div.style.display = "none";
     audiogram_div.style.position = "absolute";
     audiogram_div.style.backgroundColor = "lightblue";
     audiogram_div.style.padding = "10px";
     audiogram_div.style.border = "1px solid black";
     audiogram_div.style.borderRadius = "5px";
-    var linkRect = audiogram_link.getBoundingClientRect();
+    let linkRect = audiogram_link.getBoundingClientRect();
     audiogram_div.style.top = (linkRect.top + linkRect.height) + "px";
-    audiogram_div.style.left = linkRect.left + "px"; 
+    audiogram_div.style.left = linkRect.left + "px";
     document.body.appendChild(audiogram_div);
 
     //generate plot
-    Promise.all([
-      loadScript("https://code.highcharts.com/11.4.3/highcharts.js"),
-      loadScript("https://code.highcharts.com/11.4.3/highcharts-more.js")]).then(() => {
-        //console.log('after highcharts import')
-        var chart = buildAudiogram(audiogram_data.le_hlt, audiogram_data.re_hlt, audiogram_div);
-        //console.log('after chart made');
-
-        //append to audiogram div
+    loadScript("https://code.highcharts.com/11.4.3/highcharts.js").then(() => {
+      loadScript("https://code.highcharts.com/11.4.3/highcharts-more.js").then(() => {
+        let chart = buildAudiogram(audiogram_data.le_hlt, audiogram_data.re_hlt, audiogram_div);
         audiogram_div.style.display = "block";
-        //console.log('after div shown');
       });
-  });
+    });
+  } else {
+    let linkRect = audiogram_link.getBoundingClientRect();
+    audiogram_div.style.top = (linkRect.top + linkRect.height) + "px";
+    audiogram_div.style.left = linkRect.left + "px";
+    audiogram_div.style.display = "block";
+  };
 }
+
 
 //build audiogram plot using highcharts
 function buildAudiogram(le_hlt, re_hlt, container) {
@@ -249,8 +238,8 @@ function buildAudiogram(le_hlt, re_hlt, container) {
   if (Highcharts.VMLRenderer) {
     Highcharts.VMLRenderer.prototype.symbols.cross = Highcharts.SVGRenderer.prototype.symbols.cross;
   };
-  var tones = ['250Hz', '500Hz', '1000Hz', '2000Hz', '4000Hz', '8000Hz'];
-  var chart = Highcharts.chart(container, {
+  let tones = ['250Hz', '500Hz', '1000Hz', '2000Hz', '4000Hz', '8000Hz'];
+  let chart = Highcharts.chart(container, {
     tooltip: false,
     credits: false,
     title: {
@@ -426,10 +415,10 @@ function buildAudiogram(le_hlt, re_hlt, container) {
       }
     ]
   });
-return chart;
+  return chart;
 }
 
-  
+
 export default {
   name: "extend-for-audiograms",
   initialize(container) {
