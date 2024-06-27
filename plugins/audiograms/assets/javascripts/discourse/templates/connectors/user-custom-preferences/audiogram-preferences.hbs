@@ -1,10 +1,10 @@
 {{#if siteSettings.audiograms_enabled}}
   <div class="control-group audiograms">
-    <label class="control-label">{{i18n "audiograms.my_audiogram"}}</label>
+    <label class="control-label">{{"My Audiogram"}}</label>
     <div class="controls">
-        <button class="popup-trigger-audiogram">Create Audiogram</button>
-        <div class="popup-audiogram" style="display: none;">
-        <form role="form" class="edit_audio" id="edit_audio_3746" action="/audios/3746" accept-charset="UTF-8" method="post">
+        <button class="popup-trigger-audiogram" style="padding: 10px 20px; background-color: #007bff; color: #fff; border: none; cursor: pointer; border-radius: 4px;">Create Audiogram</button>
+        <div class="popup-audiogram" style="display: none">        
+        <form role="form" class="edit_audio" id="edit_audio_3746" action="/audios/3746" accept-charset="UTF-8" method="post" style="max-width: 400px; margin: 0 auto;">
                 <input type="hidden" name="_method" value="patch" autocomplete="off" /><input type="hidden"
                         name="authenticity_token"
                         value="GmxpRkjD6W3wnVbTsgD5Dc7d9jk7M7A8T4TxVQIS0OCGNnJWY7FomPnkuL4I1-17_JW2rSNh2vvY1xwF1QcT2w"
@@ -16,7 +16,7 @@
                                                 name="audio[test_date]" id="audio_test_date" /></div>
                         </div>
                 </div>
-        
+
                 <div class='row'>
                         <div class='col-md-12'>
                                 <h3 class='mt-4'>
@@ -939,22 +939,24 @@
                                                 placeholder="0-100%" class="form-control" type="number"
                                                 name="audio[score_right]" id="audio_score_right" /></div>
                                 <div class="form-group"><label for="audio_level_right">Level</label><input min="0" max="120"
-                                                placeholder="Decibel level in HL" class="form-control" type="number"
-                                                name="audio[level_right]" id="audio_level_right" /></div>
-                        </div>
-                        <div class='col-md-12'>
-                                <input type="submit" name="submit-audiogram" value="Save My Audiogram"
-                                        class="btn btn-info btn-block btn-lg submit-audiogram" style="margin-top:15px;"
-                                        data-disable-with="Save My Audiogram" />
-                        </div>
-                        <div class='col-md-12'>
-                                <input type="close" name="close-audiogram" value="Cancel"
-                                        class="btn btn-info btn-block btn-lg close-audiogram" style="margin-top:15px;"
-                                        data-disable-with="Cancel" />
-                        </div>
-                </div>
-        </form>
-        </div>
-    </div>
-  </div>
+                                                placeholder="Decibel level in HL" class="form-control" type="number" name="audio[level_right]"
+                                                id="audio_level_right" /></div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-6">
+                                                <input type="submit" name="submit-audiogram" value="Save My Audiogram"
+                                                        class="btn btn-info btn-block btn-lg submit-audiogram" style="margin-top:15px;"
+                                                        data-disable-with="Save My Audiogram" />
+                                        </div>
+                                        <div class="col-md-6">
+                                                <input type="button" name="close-audiogram" value="Cancel"
+                                                        class="btn btn-info btn-block btn-lg close-audiogram-form" style="margin-top:15px;"
+                                                        data-disable-with="Cancel" />
+                                        </div>
+                                </div>
+                                </div>
+                                </form>
+                                </div>
+                                </div>
+                                </div>
 {{/if}}

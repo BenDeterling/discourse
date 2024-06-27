@@ -6,11 +6,11 @@ document.addEventListener('click', (e) => {
     openAudiogramPopup(e);
   } else if (e.target.classList.contains('submit-audiogram')) {
     submitAudiogramForm(e);
-  }
-  else if (e.target.classList.contains('audiogram-link')) {
+  } else if (e.target.classList.contains('audiogram-link')) {
     displayAudiogram(e);
-  }
-  else if (!e.target.classList.contains('audiogram-div')) {
+  } else if (e.target.classList.contains('close-audiogram-form')) {
+    closeAudiogramPopup(e);
+  } else if (!e.target.classList.contains('audiogram-div')) {
     const audiogram_div_list = document.getElementsByClassName('audiogram-div');
     for (var audiogram_div of audiogram_div_list) {
       if (audiogram_div) {
