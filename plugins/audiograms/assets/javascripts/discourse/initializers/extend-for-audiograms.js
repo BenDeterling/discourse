@@ -190,6 +190,15 @@ function attachAudiogramLink(api, siteSettings) {
   });
 }
 
+/*
+//attach div to nav bar for HT links
+function attachNavItem(api, siteSettings) {
+  api.modifyClass("extra-nav-item", (dec) => {
+    return dec.h('a', {text: "extra nav item test"});
+  });
+}
+*/
+
 //add audiogram container to link element
 function displayAudiogram(e) {
   e.preventDefault();
@@ -425,6 +434,7 @@ export default {
     const siteSettings = container.lookup("service:site-settings");
     if (siteSettings.audiograms_enabled) {
       withPluginApi("0.1", (api) => attachAudiogramLink(api, siteSettings));
+      //withPluginApi("0.1", (api) => attachNavItem(api, siteSettings));
       //withPluginApi("0.1", (api) => addSetting(api, siteSettings));
     }
   },
