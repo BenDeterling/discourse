@@ -2,7 +2,7 @@
     position: sticky;
     top: 0;
     left: 0;
-    width: 150%;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: left; /* Center horizontally */
@@ -14,6 +14,7 @@
     color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    overflow: auto;
   }
   
   #audiogram-form {
