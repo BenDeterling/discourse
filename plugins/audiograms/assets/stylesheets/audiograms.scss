@@ -1,0 +1,73 @@
+.popup-audiogram {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 100%;
+    display: flex;
+    justify-content: left; /* Center horizontally */
+    align-items: left; /* Center vertically */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    max-width: 1200px; /* Adjust as needed */
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  #audiogram-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch; /* Stretch items to full width */
+  }
+  
+  .row {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+  }
+  
+  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .button-group {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  button[type="submit"],
+  button[type="cancel"] {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover,
+  button[type="cancel"]:hover {
+    background-color: #0056b3;
+  }
+  
