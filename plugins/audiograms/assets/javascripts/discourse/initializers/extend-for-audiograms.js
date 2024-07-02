@@ -204,7 +204,7 @@ function displayAudiogram(e) {
   e.preventDefault();
   const audiogram_raw = e.target.dataset.audiogram;
   const user_id = e.target.dataset.id;
-  let audiogram_link = e.target;
+  const audiogram_link = e.target;
   const audiogram_data = JSON.parse(audiogram_raw);
   //create div to render to
   let audiogram_div = document.getElementById('audiogram-div-' + user_id);
@@ -218,9 +218,18 @@ function displayAudiogram(e) {
     audiogram_div.style.padding = "10px";
     audiogram_div.style.border = "1px solid black";
     audiogram_div.style.borderRadius = "5px";
-    let linkRect = audiogram_link.getBoundingClientRect();
-    audiogram_div.style.top = (linkRect.top + linkRect.height) + "px";
-    audiogram_div.style.left = linkRect.left + "px";
+
+    const windowWidth = window.innerWidth;
+    const divWidth = Math.min(windowWidth + 20, 600)
+    audiogram_div.style.width = divWidth + 'px';
+    audiogram_div.style.height = divWidth * (2/3) + 'px';
+
+    const linkRect = audiogram_link.getBoundingClientRect();
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+    audiogram_div.style.top = (linkRect.top + linkRect.height + scrollTop) + 'px';
+    audiogram_div.style.left = (linkRect.left + scrollLeft) + 'px';
+
     document.body.appendChild(audiogram_div);
 
     //generate plot
@@ -231,9 +240,17 @@ function displayAudiogram(e) {
       });
     });
   } else {
-    let linkRect = audiogram_link.getBoundingClientRect();
-    audiogram_div.style.top = (linkRect.top + linkRect.height) + "px";
-    audiogram_div.style.left = linkRect.left + "px";
+    const linkRect = audiogram_link.getBoundingClientRect();
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+    audiogram_div.style.top = (linkRect.top + linkRect.height + scrollTop) + 'px';
+    audiogram_div.style.left = (linkRect.left + scrollLeft) + 'px';
+
+    const windowWidth = window.innerWidth;
+    const divWidth = Math.min(windowWidth + 20, 600)
+    audiogram_div.style.width = divWidth + 'px';
+    audiogram_div.style.height = divWidth * (2/3) + 'px';
+
     audiogram_div.style.display = "block";
   };
 }
