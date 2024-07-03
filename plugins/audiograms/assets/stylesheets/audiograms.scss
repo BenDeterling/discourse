@@ -71,4 +71,23 @@
   button[type="cancel"]:hover {
     background-color: #0056b3;
   }
-  
+
+.audiogram-div {
+    /*width: 450px;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 1.5em;
+    width:450px;
+    height:450px;
+    z-index: 9999;
+}
+
+@media (max-width: 450px) {
+  .audiogram-div {
+    width:90vw;
+    height:300px;
+    overflow: hidden;
+  }
+}
